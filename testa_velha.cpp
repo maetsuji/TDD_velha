@@ -5,5 +5,6 @@
 
 TEST_CASE( "Jogos da Velha", "[jogos]" ) {
     // Implementar testes aqui:
-    // REQUIRE( valida_velha([[][][]]) == -1);
+    int tabuleiro[3][3] = {{0,0,0},{0,0,0},{0,0,0}};
+    REQUIRE( valida_velha(tabuleiro) == -1); // Indefinido
 }
