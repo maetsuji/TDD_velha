@@ -5,11 +5,11 @@
 
 TEST_CASE( "Jogos da Velha", "[jogos]" ) {
     // Implementar testes aqui:
-    int tabuleiro[3][3] = {{0,0,0},{0,0,0},{0,0,0}}; // Teste 1
-    int resultado = -1  // Indefinido
-    REQUIRE( valida_velha(tabuleiro) == resultado);
+    int tabuleiro1[3][3] = {{0,0,0},{0,0,0},{0,0,0}};    // Teste 1
+    int resultado1 = -1;  // Indefinido
+    REQUIRE( valida_velha(tabuleiro1) == resultado1);
     
-    int tabuleiro[3][3] = {{1,1,1},{0,0,0},{2,2,0}};// Teste 2
-    resultado = 1;  // Jogador 1 venceu
-    REQUIRE( valida_velha(tabuleiro) == resultado);
+    int tabuleiro2[3][3] = {{1,1,1},{0,0,0},{2,2,0}};    // Teste 2
+    int resultado2 = 1;  // Jogador 1 venceu
+    REQUIRE( valida_velha(tabuleiro2) == resultado2);
 }
