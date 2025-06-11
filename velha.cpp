@@ -7,7 +7,7 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
     // O valor 1 significa que a posição está com um X 
     // O valor 2 significa que a posição está com um O
     
-    int resultado;// = -1; // Inicializa o resultado como indefinido·
+    int resultado = -1; // Inicializa o resultado como indefinido, deixando para acertar a lógica depois
 
     /* 
     
