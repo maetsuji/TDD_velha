@@ -1,4 +1,23 @@
-# 🎯 Trabalho TDD - Jogo da Velha
+# 🎯 Tra### Legenda:
+1. **Matriz de entrada**:
+   - O jogo da velha é representado como uma matriz 3x3 de inteiros.
+   - `0` = posição vazia
+   - `1` = posição com X  
+   - `2` = posição com O
+   
+   **Exemplo:**
+   ```plaintext
+                                         [X][X][X]
+   [[1, 1, 1],[0, 2, 2],[0, 2, 1]]  ==   [ ][O][O]
+                                         [ ][O][X]
+   ```
+
+2. **Códigos de retorno**:
+   - `1` → X venceu
+   - `2` → O venceu  
+   - `0` → Jogo empatado
+   - `-1` → Jogo indefinido (ainda em andamento)
+   - `-2` → Estado impossível pelas regras Velha
 
 ## 👨‍💻 Autor
 **Rodrigo Rafik Menêzes de Moraes** - Matrícula: 232009502
