@@ -65,13 +65,15 @@ Este projeto implementa um validador de estados do jogo da velha utilizando a me
    make test
    ```
 
-5. Para verificar o código com o `cpplint` (analisador de estilo), use:
-   ```
+### 🛠️ Ferramentas de Análise
+
+5. **Para verificar estilo de código:**
+   ```bash
    make cpplint
    ```
 
-6. Para gerar relatórios de cobertura de código com `gcov`, use:
-   ```
+6. **Para gerar relatório de cobertura:**
+   ```bash
    make gcov
    ```
 
