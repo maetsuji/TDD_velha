@@ -11,13 +11,13 @@ int conta_ocorrencia(int matriz[3][3], int VOX) {
 }
 
 // Verifica se há algum valor inválido na matriz (não 0, 1, ou 2)
-// bool contem_valor_invalido(int matriz[3][3]) {
-//     for (int i = 0; i < 3; i++)
-//         for (int j = 0; j < 3; j++)
-//             if (matriz[i][j] < 0 || matriz[i][j] > 2)
-//                 return true;
-//     return false;
-// }
+bool contem_valor_invalido(int matriz[3][3]) {
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            if (matriz[i][j] < 0 || matriz[i][j] > 2)
+                return true;
+    return false;
+}
 
 // Retorna o vencedor (1 para X, 2 para O) ou 0 se não houver
 int verifica_vencedor(int matriz[3][3]) {
@@ -85,8 +85,8 @@ int valida_velha(int matriz[3][3]) {
     // O valor 1 significa que a posição está com um X 
     // O valor 2 significa que a posição está com um O
     
-    // if (contem_valor_invalido(matriz))
-    //     return -2;
+    if (contem_valor_invalido(matriz))
+        return -2;
 
     int contagemX = conta_ocorrencia(matriz, 1);
     int contagemO = conta_ocorrencia(matriz, 2);
