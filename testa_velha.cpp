@@ -28,6 +28,10 @@ TEST_CASE( "Jogos da Velha Invalidos", "[jogos]" ) {
     REQUIRE( valida_velha(tabuleiro5a) == resultado5a);
 
     int tabuleiro5b[3][3] = {{2,2,2},{1,1,1},{0,0,0}};    // Teste 5
-    int resultado5b = -2; // Proibido, dois jogadores venceram
+    int resultado5b = -2; // Proibido, dois jogadores venceram na horizontal
     REQUIRE( valida_velha(tabuleiro5b) == resultado5b);
+
+    int tabuleiro6[3][3] = {{2,0,1},{2,0,1},{2,0,1}};    // Teste 5
+    int resultado6 = -2; // Proibido, dois jogadores venceram na vertical
+    REQUIRE( valida_velha(tabuleiro6) == resultado6);
 }
