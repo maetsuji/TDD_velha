@@ -49,23 +49,19 @@ Este projeto implementa um validador de estados do jogo da velha utilizando a me
 
 1. Certifique-se de que você tenha o compilador `g++`, o utilitário `make` e as demais dependências instaladas no seu sistema.
 
-2. Para compilar e executar os testes, basta executar o comando:
-   ```
+2. **Para compilar e executar os testes:**
+   ```bash
    make
    ```
+   *(Compila os arquivos, gera o executável `testa_velha` e executa os testes automaticamente)*
 
-   Isso irá:
-   - Compilar os arquivos necessários.
-   - Gerar o executável `testa_velha`.
-   - Executar os testes automaticamente.
-
-3. Caso queira apenas compilar o programa sem executar os testes, use:
-   ```
+3. **Para apenas compilar sem executar:**
+   ```bash
    make compile
    ```
 
-4. Para executar os testes manualmente após a compilação, use:
-   ```
+4. **Para executar os testes manualmente:**
+   ```bash
    make test
    ```
 
