@@ -1,2 +1,12 @@
-com o g++ e o make e demais programas instalados 
-digite "make" neste diretório 
+# Instruções de Compilação
+
+Para compilar e executar o projeto:
+
+1. Certifique-se de ter o g++ e make instalados
+2. Execute o comando: make
+3. O programa será compilado e os testes executados automaticamente
+
+Requisitos:
+- g++ (compilador C++)
+- make (utilitário de build)
+- Sistema Linux/Unix 
