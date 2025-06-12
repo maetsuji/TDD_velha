@@ -1,7 +1,12 @@
+# Makefile para projeto TDD - Jogo da Velha
+# Autor: Rodrigo Rafik Menêzes de Moraes - 232009502
+
+# Target principal: compila e executa os testes
 all: testa_velha.cpp   velha.cpp velha.hpp velha.o
 	g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha
 	./testa_velha
 
+# Apenas compila o programa sem executar
 compile: testa_velha.cpp   velha.cpp velha.hpp velha.o
 	g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha	
 test: testa_velha	
