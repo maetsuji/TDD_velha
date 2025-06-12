@@ -1,5 +1,7 @@
-# Trabalho TDD
-## Rodrigo Rafik Menêzes de Moraes - 232009502
+# 🎯 Trabalho TDD - Jogo da Velha
+
+## 👨‍💻 Autor
+**Rodrigo Rafik Menêzes de Moraes** - Matrícula: 232009502
 
 ### Legenda:
 1. **Matriz de entrada**:
