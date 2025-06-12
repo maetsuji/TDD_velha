@@ -21,3 +21,13 @@ TEST_CASE( "Jogos da Velha", "[jogos]" ) {
     int resultado4 = 0 ; // Empate
     REQUIRE( valida_velha(tabuleiro4) == resultado4);
 }
+
+TEST_CASE( "Jogos da Velha Invalidos", "[jogos]" ) {
+    int tabuleiro5a[3][3] = {{2,2,0},{0,1,0},{0,0,0}};    // Teste 5
+    int resultado5a = -2; // Proibido, Quantidade de O é maior que a de X
+    REQUIRE( valida_velha(tabuleiro5a) == resultado5a);
+
+    int tabuleiro5b[3][3] = {{2,2,2},{1,1,1},{0,0,0}};    // Teste 5
+    int resultado5b = -2; // Proibido, dois jogadores venceram
+    REQUIRE( valida_velha(tabuleiro5b) == resultado5b);
+}

@@ -95,6 +95,7 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
             }
         }
     }
+
     return resultado; 
     // Retorna 1 se o vencedor foi o X 
     // Retorna 2 se o vencedor foi o O 
