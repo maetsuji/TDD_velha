@@ -3,6 +3,9 @@
 ## 👨‍💻 Autor
 **Rodrigo Rafik Menêzes de Moraes** - Matrícula: 232009502
 
+## 📋 Visão Geral
+Este projeto implementa um validador de estados do jogo da velha utilizando a metodologia TDD (Test Driven Development).
+
 ### Legenda:
 1. **Matriz de entrada**:
    - O jogo da velha é representado como uma matriz 3x3 de inteiros. 
