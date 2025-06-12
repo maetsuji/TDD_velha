@@ -6,7 +6,7 @@
 TEST_CASE( "Jogos da Velha", "[jogos]" ) {
     // Implementar testes aqui:
     int tabuleiro1[3][3] = {{0,0,0},{0,0,0},{0,0,0}};    // Teste 1
-    int resultado1 = -1;  // Indefinido
+    int resultado1 = -1;                                                                                                                                                                                                                                                                                                                                                                                                                                           // Indefinido
     REQUIRE( valida_velha(tabuleiro1) == resultado1);
     
     int tabuleiro2[3][3] = {{1,1,1},{0,0,0},{2,2,0}};    // Teste 2
