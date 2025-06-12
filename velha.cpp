@@ -86,6 +86,14 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
                 }
             }
         }
+        if (!vencedorFlag) {
+            // Se não houve vencedor, verifica se o jogo está empatado
+            if (contagemVazio == 0) {
+                resultado = 0; // Empate
+            } else {
+                resultado = -1; // Jogo indefinido (ex. tem apenas um X)
+            }
+        }
     }
     return resultado; 
     // Retorna 1 se o vencedor foi o X 
