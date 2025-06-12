@@ -56,16 +56,24 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
                 }
             }
         }
-        // Verifica colunas
+                // Verifica colunas
         if (!vencedorFlag) {            
             for (int j = 0; j < 3; j++) {
                 if (matriz[0][j] == matriz[1][j] && matriz[1][j] == matriz[2][j]) {
                     if (matriz[0][j] == 1) {
-                        resultado = 1; // X venceu
-                        vencedorFlag = 1; // Marca que já encontrou um vencedor
+                        if (vencedorFlag) {
+                            resultado = -2; // Se já encontrou um vencedor, mas ainda está verificando, é inválido
+                        } else {
+                            vencedorFlag = 1; // Marca que já encontrou um vencedor
+                            resultado = 1; // X venceu
+                        }
                     } else if (matriz[0][j] == 2) {
-                        resultado = 2; // O venceu
-                        vencedorFlag = 1; // Marca que já encontrou um vencedor
+                        if (vencedorFlag) {
+                            return -2; // Se já encontrou um vencedor, mas ainda está verificando, é inválido
+                        } else {
+                            vencedorFlag = 1; // Marca que já encontrou um vencedor
+                            resultado = 2; // O venceu
+                        }
                     }
                 }
             }
