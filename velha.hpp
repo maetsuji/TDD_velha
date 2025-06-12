@@ -1,0 +1,1 @@
+int valida_velha(int matriz[3][3]);
