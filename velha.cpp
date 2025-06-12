@@ -30,59 +30,63 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
     int contagemVazio = conta_ocorrencia(matriz, 0); // Contador de posições vazias
 
     // Verifica se há um vencedor:
-    // Verifica linhas
-    if (!vencedorFlag) {
-        for (int i = 0; i < 3; i++) {
-            if (matriz[i][0] == matriz[i][1] && matriz[i][1] == matriz[i][2]) {
-                if (matriz[i][0] == 1) {
+    if (contagemX < contagemO || contagemX > contagemO + 1) {
+        // Se a quantidade de X é menor que a de O ou maior que a de O + 1, o jogo é impossível
+        resultado = -2; // Jogo impossível pelas regras
+    } else {
+        // Verifica linhas
+        if (!vencedorFlag) {
+            for (int i = 0; i < 3; i++) {
+                if (matriz[i][0] == matriz[i][1] && matriz[i][1] == matriz[i][2]) {
+                    if (matriz[i][0] == 1) {
+                        resultado = 1; // X venceu
+                        vencedorFlag = 1; // Marca que já encontrou um vencedor
+                    } else if (matriz[i][0] == 2) {
+                        resultado = 2; // O venceu
+                        vencedorFlag = 1; // Marca que já encontrou um vencedor
+                    }
+                }
+            }
+        }
+        // Verifica colunas
+        if (!vencedorFlag) {            
+            for (int j = 0; j < 3; j++) {
+                if (matriz[0][j] == matriz[1][j] && matriz[1][j] == matriz[2][j]) {
+                    if (matriz[0][j] == 1) {
+                        resultado = 1; // X venceu
+                        vencedorFlag = 1; // Marca que já encontrou um vencedor
+                    } else if (matriz[0][j] == 2) {
+                        resultado = 2; // O venceu
+                        vencedorFlag = 1; // Marca que já encontrou um vencedor
+                    }
+                }
+            }
+        }
+        // Verifica diagonal principal 
+        if (!vencedorFlag) { 
+            if (matriz[0][0] == matriz[1][1] && matriz[1][1] == matriz[2][2]) {
+                if (matriz[0][0] == 1) {
                     resultado = 1; // X venceu
                     vencedorFlag = 1; // Marca que já encontrou um vencedor
-                } else if (matriz[i][0] == 2) {
+                } else if (matriz[0][0] == 2) {
+                    resultado = 2; // O venceu
+                    vencedorFlag = 1; // Marca que já encontrou um vencedor
+                }
+            }
+        }
+        // Verifica diagonal secundária
+        if (!vencedorFlag) { 
+            if (matriz[0][2] == matriz[1][1] && matriz[1][1] == matriz[2][0]) {
+                if (matriz[0][2] == 1) {
+                    resultado = 1; // X venceu
+                    vencedorFlag = 1; // Marca que já encontrou um vencedor
+                } else if (matriz[0][2] == 2) {
                     resultado = 2; // O venceu
                     vencedorFlag = 1; // Marca que já encontrou um vencedor
                 }
             }
         }
     }
-    // Verifica colunas
-    if (!vencedorFlag) {            
-        for (int j = 0; j < 3; j++) {
-            if (matriz[0][j] == matriz[1][j] && matriz[1][j] == matriz[2][j]) {
-                if (matriz[0][j] == 1) {
-                    resultado = 1; // X venceu
-                    vencedorFlag = 1; // Marca que já encontrou um vencedor
-                } else if (matriz[0][j] == 2) {
-                    resultado = 2; // O venceu
-                    vencedorFlag = 1; // Marca que já encontrou um vencedor
-                }
-            }
-        }
-    }
-    // Verifica diagonal principal 
-    if (!vencedorFlag) { 
-        if (matriz[0][0] == matriz[1][1] && matriz[1][1] == matriz[2][2]) {
-            if (matriz[0][0] == 1) {
-                resultado = 1; // X venceu
-                vencedorFlag = 1; // Marca que já encontrou um vencedor
-            } else if (matriz[0][0] == 2) {
-                resultado = 2; // O venceu
-                vencedorFlag = 1; // Marca que já encontrou um vencedor
-            }
-        }
-    }
-    // Verifica diagonal secundária
-    if (!vencedorFlag) { 
-        if (matriz[0][2] == matriz[1][1] && matriz[1][1] == matriz[2][0]) {
-            if (matriz[0][2] == 1) {
-                resultado = 1; // X venceu
-                vencedorFlag = 1; // Marca que já encontrou um vencedor
-            } else if (matriz[0][2] == 2) {
-                resultado = 2; // O venceu
-                vencedorFlag = 1; // Marca que já encontrou um vencedor
-            }
-        }
-    }
-    
     return resultado; 
     // Retorna 1 se o vencedor foi o X 
     // Retorna 2 se o vencedor foi o O 
