@@ -16,4 +16,8 @@ TEST_CASE( "Jogos da Velha", "[jogos]" ) {
     int tabuleiro3[3][3] = {{2,0,0},{2,0,0},{2,1,1}};    // Teste 3
     int resultado3 = -2; // Proibido, Quantidade de O é maior que a de X
     REQUIRE( valida_velha(tabuleiro3) == resultado3);
+
+    int tabuleiro4[3][3] = {{1,1,2},{2,1,1},{1,2,2}};    // Teste 4
+    int resultado4 = 0 ; // Empate
+    REQUIRE( valida_velha(tabuleiro4) == resultado4);
 }

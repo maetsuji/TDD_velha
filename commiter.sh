@@ -45,7 +45,6 @@ echo "#: Teste $1 falhou!"
 # Adiciona o resultado da execução e commita a falha do teste
 git add .
 git commit -m "Teste $1 - ❌ Falhou" 
-git push origin main
 
 # FASE 3: PAUSA PARA IMPLEMENTAÇÃO DO CÓDIGO (GREEN)
 echo "#: Agora, implemente o código necessário para passar no teste $1."
@@ -65,7 +64,6 @@ if [ $? -eq 0 ]; then
     # Adiciona as alterações e commita o sucesso do teste
     git add .
     git commit -m "Teste $1 - ✅ Passou"
-    git push origin main
 else
     echo "#: Teste $1 falhou novamente."
 fi
