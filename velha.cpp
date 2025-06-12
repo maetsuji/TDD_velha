@@ -34,7 +34,7 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
         // Se a quantidade de X é menor que a de O ou maior que a de O + 1, o jogo é impossível
         resultado = -2; // Jogo impossível pelas regras
     } else {
-// Verifica linhas
+        // Verifica linhas
         if (!vencedorFlag) {
             for (int i = 0; i < 3; i++) {
                 if (matriz[i][0] == matriz[i][1] && matriz[i][1] == matriz[i][2]) {
@@ -43,7 +43,7 @@ int valida_velha(int matriz[3][3]) { // Recebe uma matriz de inteiros com 3 linh
                             return -2; // Se já encontrou um vencedor, mas ainda está verificando, é inválido
                         } else {
                             vencedorFlag = 1; // Marca que já encontrou um vencedor
-                            resultado = 2; // O venceu
+                            resultado = 1; // O venceu
                         }
                     } else if (matriz[i][0] == 2) {
                         if (vencedorFlag) {
